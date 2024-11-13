@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Horizontal Parallelogram Buttons</title>
     <link rel="stylesheet" href="bmw.css">
-   
 </head>
 <body>
     <nav>
         <div class="menu-icon" id="menu-icon">
-            <!-- Hamburger icon (3 bars) -->
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -22,24 +20,22 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+
     <div class="video-container">
         <video src="bmnh.mp4" autoplay muted loop></video>
     </div>
 
     <div class="button-container">
-        <button class="button" style="background-image: url(08813f91f317c1cad761d6771f5ec080x.jpg);"><span><a href="sedans.html"> Sedans</a></span></button>
-        <button class="button" style="background-image: url(HD-wallpaper-bmw-car-suv-vehicle-vehicles-black-car-bmw-x7.jpg);"><span><a href="SUVs.html">SUVs</a></span></button>
-        <button class="button" style="background-image: url(photo_2024-10-18_16-02-00.jpg);"><span><a href="mseries.html">M Series</a></span></button>
+        <a href="sedans.html" class="button" style="background-image: url(08813f91f317c1cad761d6771f5ec080x.jpg);"><span>Sedans</span></a>
+        <a href="SUVs.html" class="button" style="background-image: url(HD-wallpaper-bmw-car-suv-vehicle-vehicles-black-car-bmw-x7.jpg);"><span>SUVs</span></a>
+        <a href="mseries.html" class="button" style="background-image: url(photo_2024-10-18_16-02-00.jpg);"><span>M Series</span></a>
     </div>
 
     <script>
-        // Get the elements
+        
         const menuIcon = document.getElementById('menu-icon');
         const menu = document.getElementById('menu');
-
-        // Add click event listener to the menu icon
         menuIcon.addEventListener('click', function() {
-            // Toggle the 'show' class on the menu
             menu.classList.toggle('show');
         });
     </script>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            transform: scale(0.9);
+            filter: brightness(0.9);
+        }
+
+        .card-img {
+            filter: brightness(0.5);
+            transition: filter 0.5s ease;
+        }
+
+        .card-img-overlay, .card-body {
+            text-align: center;
+            color: white;
+        }
+
+        .card:hover .card-img {
+            filter: brightness(1);
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        .bar {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: left 0.5s ease;
+    z-index: 1; 
+}
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Ensure the hamburger icon stays on top of the menu */
+    cursor: pointer;
+}
+
+
+        .menu li {
+            margin: 20px 0;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            background-color: #444;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .menu.show {
+            left: 0;
+        }
+
+        .blue-card {
+            background-color: #0061ad;
+        }
+
+        .black-card {
+            background-color: #333;
+        }
+
+        .card-text {
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .card-img {
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 1.2rem;
+            }
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Services</h1>
+    <div class="card text-bg-dark blue-card">
+        <img src="a0284419_1_.webp" class="card-img" alt="BMW Service">
+        <div class="card-img-overlay">
+            <h5 class="card-title" style="text-shadow: 1px 2px 1px #000000;">Car Servicing</h5>
+            <p class="card-text" style="text-align: center;text-shadow: 1px 2px 1px #000000;">GENUINE BMW SERVICE Trust our specialized BMW technicians for scheduled services and check-ups. With expert knowledge and advanced diagnostic tools, we ensure your BMW stays in peak condition.</p>
+        </div>
+    </div>
+    <div class="card mb-3 black-card" style="max-width: 5040px;">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="a0287712.webp" class="card-img" alt="BMW Service Inclusive">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Service Inclusive (BSI)</h5>
+                    <p class="card-text">With BMW Service Inclusive, enjoy full driving pleasure without worrying about maintenance, inspections, or wear & tear costs. This coverage applies to both new and used vehicles, including Original BMW Parts, at participating BMW Service Centres worldwide. Plus, if you sell your BMW, the package transfers to the next owner, boosting your car’s resale value.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 blue-card" style="max-width: 5040px;">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Warranty</h5>
+                    <p class="card-text">DRIVING PLEASURE GUARANTEED. Anyone who buys a new BMW is guaranteed driving pleasure. And more: the exceptionally high standard of quality down to even the tiniest component is a pledge that the BMW brand stands by many years down the line, and thousands of kilometres after a car has been initially registered. A pledge you can rely on.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="a0287714.webp" class="card-img" alt="BMW Warranty">
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 black-card" style="max-width: 5040px;">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="a0287782.webp" class="card-img" alt="BMW Original Parts">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Original Parts</h5>
+                    <p class="card-text">Who better to deliver the precision and quality of car parts for your BMW than BMW? We have an intimate knowledge of your vehicle and what it takes to create and maintain The Ultimate Driving Machine. With every one of the 20,000 components that typically makes up your BMW being the product of an incredible amount of thought and expertise, it makes sense to replace like with like during your ownership journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 blue-card" style="max-width: 5040px;">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Roadside Assistance</h5>
+                    <p class="card-text">The free-of-charge BMW Roadside Assistance service is available to all BMW drivers around the clock, 365 days a year. A single call – and our experts are at your service, either on the phone or on the scene if required. When you call us, we take care of absolutely everything that needs to be done in the event of a breakdown or accident. Even over the phone we can provide you with important information and if necessary initiate further steps. Meanwhile, you can remain completely calm and</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="a0288554.webp" class="card-img" alt="BMW Roadside Assistance">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+        
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

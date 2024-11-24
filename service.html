@@ -132,51 +132,55 @@ nav-links li {
     padding: 20px 0;
     font-size: 0.9rem;
     margin-top: 20px;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  .footer-section {
+}
+
+.footer-section {
     flex: 1;
     min-width: 200px;
     margin: 10px 0;
-  }
-  
-  .footer-section h4 {
+}
+
+.footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.1rem;
     color: #ffffff;
-  }
-  
-  .footer-section ul {
+}
+
+.footer-section ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-section ul li {
+}
+
+.footer-section ul li {
     margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
+}
+
+.footer-section ul li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-  }
+}
 
-  .social-icons {
+.footer-section ul li a:hover {
+    color: #8a9092;
+}
+
+.social-icons {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     width: 30px;
     height: 30px;
     display: inline-flex;
@@ -185,28 +189,23 @@ nav-links li {
     border-radius: 50%;
     background-color: #fff8f8;
     transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .social-icons a img {
+}
+
+.social-icons a img {
     width: 18px;
     height: 18px;
-  }
-  
-  .social-icons a img:hover {
+}
+
+.social-icons a img:hover {
     background-color: #ffffff;
     transform: scale(1.1);
-  }
-  
-  .footer-section ul li a:hover {
-    color: #8a9092;
-  }
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 20px;
-    border-top: 1px solid #ffffff;
-    padding: 10px 0;
-    font-size: 0.8rem;
-  }
+    border-top: 1p
+}
   
 
 .menu-toggle{
@@ -251,9 +250,9 @@ nav-links li {
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
             <li><a href="service.html">Services</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
        
     </nav>
@@ -327,8 +326,8 @@ nav-links li {
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="a1hasan.github.io-main/index.html">Home</a></li>
-                    <li><a href="5series.html">About Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contact.html">Services</a></li>
                     <li><a href="index.html">Contact</a></li>
                 </ul>
@@ -362,6 +361,7 @@ nav-links li {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+        
     </script>
     
 </body>

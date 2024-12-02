@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bmw.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Horizontal Parallelogram Buttons</title>
+   
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+        <video src="bmnh.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="button-container">
+        <a href="xxx" class="button" style="background-image: url(2023-BMW-X1-M-Sport-001.jpg);"><span>X1</span></a>
+
+        <a href="xxx" class="button" style="background-image: url(photo-1717082842911-9e55aeaf80cb.jpeg);"><span>X3</span></a>
+        <a href="xxx" class="button" style="background-image: url(6d35916549b4c5c435bff7b5e279dd32.jpg);"><span>X5</span></a>
+        <a href="xxx" class="button" style="background-image: url(        a959545e91a29ec2edfbb8f0159fac35.jpeg
+);"><span>X7</span></a>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+
+        menuIcon.addEventListener('click', function() {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

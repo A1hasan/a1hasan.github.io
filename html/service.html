@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #fffdfd;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, filter 0.3s ease, background-color 0.5s ease;
+            transform: scale(0.9);
+            filter: brightness(0.9);
+            
+        }
+
+        .card-img {
+            filter: brightness(0.5);
+            transition: filter 0.5s ease;
+        }
+
+        .card-img-overlay, .card-body {
+            text-align: center;
+            color: white;
+        }
+
+        .card:hover .card-img {
+            filter: brightness(1);
+            
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+            background-color:  #5084e5;
+
+        }
+
+     
+        
+        .blue-card {
+            background-color:  #012f86;
+        }
+
+        .black-card {
+            background-color: #012f86;
+        }
+
+        .card-text {
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .card-img {
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 1.2rem;
+            }
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #012f86;
+    color: #fff;
+    position: relative;
+}
+
+.logo-img{
+    height: 50px;
+    width: auto;
+    padding: 10px 0px 0px 0px;
+}
+
+.nav-links {
+    z-index: 3;
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav-links li {
+    position: relative; 
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+     
+    border-radius: 5px;
+}
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.footer {
+    background-color: #012f86;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #8a9092;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff8f8;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a img {
+    width: 18px;
+    height: 18px;
+}
+
+.social-icons a img:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1p
+}
+  
+
+.menu-toggle{
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color:#161e2e;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"> 
+            <img src="bmwlogo.png" alt="BMW Logo" class="logo-img"> 
+        </a>
+        <button class="menu-toggle" aria-label="toggle menu">
+            &#9776;
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+       
+    </nav>
+    <h1>Services</h1>
+    <div class="card text-bg-dark blue-card">
+        <img src="a0284419_1_.webp" class="card-img" alt="BMW Service">
+        <div class="card-img-overlay">
+            <h5 class="card-title" style="text-shadow: 1px 2px 1px #000000;">Car Servicing</h5>
+            <p class="card-text" style="text-align: center;text-shadow: 1px 2px 1px #000000;">GENUINE BMW SERVICE Trust our specialized BMW technicians for scheduled services and check-ups. With expert knowledge and advanced diagnostic tools, we ensure your BMW stays in peak condition.</p>
+        </div>
+    </div>
+    <div class="card mb-3 black-card" style="max-width: 5040px;">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="a0287712.webp" class="card-img" alt="BMW Service Inclusive">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Service Inclusive (BSI)</h5>
+                    <p class="card-text">With BMW Service Inclusive, enjoy full driving pleasure without worrying about maintenance, inspections, or wear & tear costs. This coverage applies to both new and used vehicles, including Original BMW Parts, at participating BMW Service Centres worldwide. Plus, if you sell your BMW, the package transfers to the next owner, boosting your car’s resale value.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 blue-card" style="max-width: 5040px;">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Warranty</h5>
+                    <p class="card-text">DRIVING PLEASURE GUARANTEED. Anyone who buys a new BMW is guaranteed driving pleasure. And more: the exceptionally high standard of quality down to even the tiniest component is a pledge that the BMW brand stands by many years down the line, and thousands of kilometres after a car has been initially registered. A pledge you can rely on.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="a0287714.webp" class="card-img" alt="BMW Warranty">
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 black-card" style="max-width: 5040px;">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="a0287782.webp" class="card-img" alt="BMW Original Parts">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Original Parts</h5>
+                    <p class="card-text">Who better to deliver the precision and quality of car parts for your BMW than BMW? We have an intimate knowledge of your vehicle and what it takes to create and maintain The Ultimate Driving Machine. With every one of the 20,000 components that typically makes up your BMW being the product of an incredible amount of thought and expertise, it makes sense to replace like with like during your ownership journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 blue-card" style="max-width: 5040px;">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">BMW Roadside Assistance</h5>
+                    <p class="card-text">The free-of-charge BMW Roadside Assistance service is available to all BMW drivers around the clock, 365 days a year. A single call – and our experts are at your service, either on the phone or on the scene if required. When you call us, we take care of absolutely everything that needs to be done in the event of a breakdown or accident. Even over the phone we can provide you with important information and if necessary initiate further steps. Meanwhile, you can remain completely calm and</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="a0288554.webp" class="card-img" alt="BMW Roadside Assistance">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your trusted BMW car selection platform, delivering the latest models and detailed information.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Services</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BMW/" aria-label="Facebook"><img src="facebook.svg" alt="Facebook"></a>
+                    <a href="https://x.com/BMW?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" aria-label="Twitter"><img src="twitter-x.svg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/bmw/?hl=en" aria-label="Instagram"><img src="instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BMW Selection Platform. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+        
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+        
+    </script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+    </script>
+    
+</body>
+</html>

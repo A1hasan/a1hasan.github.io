@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Horizontal Parallelogram Buttons</title>
+    <link rel="stylesheet" href="bmw.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+        <video src="bmnh.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="button-container">
+        <a href="sedans.html" class="button" style="background-image: url(08813f91f317c1cad761d6771f5ec080x.jpg);"><span>Sedans</span></a>
+        <a href="SUVs.html" class="button" style="background-image: url(HD-wallpaper-bmw-car-suv-vehicle-vehicles-black-car-bmw-x7.jpg);"><span>SUVs</span></a>
+        <a href="mseries.html" class="button" style="background-image: url(photo_2024-10-18_16-02-00.jpg);"><span>M Series</span></a>
+    </div>
+
+    <script>
+        
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+        menuIcon.addEventListener('click', function() {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Horizontal Parallelogram Buttons</title>
+    <link rel="stylesheet" href="bmw.css">
+  
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" id="menu-icon">
+            
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="video-container">
+        <video src="bmnh.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="button-container">
+        <a href="3series.html" class="button" style="background-image: url(pexels-zhuzichun-229759257-12086412.jpg);"><span>3 Series</span></a>
+        <a href="5series.html" class="button" style="background-image: url(images.jpeg);"><span>5 Series</span></a>
+        <a href="xxxx" class="button" style="background-image: url(005e7bfa6765e6708f6537665e5e576d.jpg);"><span>7 Series</span></a>
+
+    </div>
+
+    <script>
+
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+
+        
+        menuIcon.addEventListener('click', function() {
+        
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
